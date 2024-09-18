@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Modal } from 'react-native';
-import { ModalPassword } from './src/components/modal'; 
+import { ModalPassword } from './src/components/modal/index'; 
 
 let charset = "abcdefghijklmnopqrstuvwxyz!@#$%&*0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
  
@@ -17,7 +17,7 @@ export default function App() {
     }
  
     setSenhaGerada(senha)
-    setModalVisible
+    setModalVisible(true)
  
   }
  
@@ -40,7 +40,7 @@ export default function App() {
       </Modal>
  
      
-      <Text style={styles.senha}> {senhaGerada} </Text>
+      
     </View>
   );
 }
